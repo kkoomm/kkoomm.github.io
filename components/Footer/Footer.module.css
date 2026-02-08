@@ -1,0 +1,22 @@
+.footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--gray-100);
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socials a:hover {
+    color: var(--foreground);
+}
