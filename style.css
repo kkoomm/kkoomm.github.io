@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #2c2c2c;
+    --text-sub: #666666;
+    --accent-color: #000000;
+    --font-main: 'Noto Serif KR', serif;
+    --font-eng: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.layout-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    /* 섹션 간격 */
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/* Header */
+.site-header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-family: var(--font-eng);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-main);
+}
+
+/* Main Content */
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    font-weight: 300;
+    word-break: keep-all;
+}
+
+.message-section {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #eaeaea;
+    margin: 0 auto 40px auto;
+}
+
+.contact-section {
+    margin-top: 20px;
+}
+
+.mail-link {
+    font-family: var(--font-eng);
+    font-size: 1rem;
+    font-style: italic;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+}
+
+/* Footer */
+.site-footer {
+    font-family: var(--font-eng);
+    font-size: 0.75rem;
+    color: #ccc;
+    margin-top: 40px;
+}
+
+/* Animation Utilities */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-delay: 1.5s;
+}
+
+.delay-3 {
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .layout-container {
+        padding: 24px;
+        gap: 60px;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
